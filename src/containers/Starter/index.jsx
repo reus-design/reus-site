@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from 'Components/Layout'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Typography } from 'reus'
 
 const Starter = () => {
