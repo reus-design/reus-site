@@ -28,7 +28,7 @@ export const replaceRenderer = ({
                   {
                     ({theme}) => (
                       <ThemeProvider theme={theme}>
-                        {element}
+                        {bodyComponent}
                       </ThemeProvider>
                     )
                   }
