@@ -1,27 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import Sidebar from 'Components/extra/Sidebar'
+import { css } from '@emotion/core'
 import 'reus/dist/index.css'
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <div>
-          {children}
-        </div>
-      </>
-    )}
-  />
+const Layout = ({ children, location }) => (
+  <>
+    <Sidebar location={location}/>
+    <div>
+      {children}
+    </div>
+  </>
 )
 
 Layout.propTypes = {

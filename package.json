@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "reus-docs",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Reus Design Documentation",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@muhrusdi",
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
@@ -33,17 +33,27 @@
     "@emotion/babel-preset-css-prop": "^10.0.6",
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
+    "@mdx-js/mdx": "^0.16.8",
+    "@mdx-js/tag": "^0.16.8",
+    "codemirror": "^5.43.0",
     "emotion": "^10.0.6",
     "emotion-server": "^10.0.6",
     "emotion-theming": "^10.0.6",
+    "gatsby-mdx": "^0.3.5",
+    "gatsby-plugin-remove-trailing-slashes": "^2.0.6",
+    "gatsby-transformer-remark": "^2.2.0",
+    "gsap": "^2.0.2",
+    "js-cookie": "^2.2.0",
     "prettier": "^1.15.2",
-    "react-intl": "^2.8.0"
+    "react-codemirror2": "^5.1.0",
+    "react-intl": "^2.8.0",
+    "react-transition-group": "^2.5.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/muhrusdi/reus-design"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/muhrusdi/reus-design/issues"
   }
 }

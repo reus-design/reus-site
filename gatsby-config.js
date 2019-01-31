@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Reus Starter`,
-    description: `Boilerplate for Gatsbyjs`,
-    author: `@muhrusdiid`,
+    title: `Reus Design`,
+    description: `UI Library for React`,
+    author: `@muhrusdi`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-mdx',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,7 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `components`,
+        path: `${__dirname}/src/data/mdx`,
+      },
+    },
     `gatsby-transformer-sharp`,
+    'gatsby-transformer-remark',
+    'gatsby-plugin-remove-trailing-slashes',
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

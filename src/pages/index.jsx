@@ -1,3 +1,3 @@
-import Starter from 'Containers/Starter'
+import Home from 'Containers/Home'
 
-export default Starter
+export default Home

@@ -1,4 +1,5 @@
 const path = require('path')
+const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateBabelConfig = ({ actions, stage }) => {
   actions.setBabelPreset({
@@ -29,4 +30,91 @@ exports.onCreateWebpackConfig = ({
       }
     }
   })
- }
+}
+
+// exports.onCreatePage = ({page, getNode, actions}) => {
+//   const { createPage, deletePage } = actions
+//   const node = getNode()
+//   console.log('--->',page)
+//   console.log('node--->',node)
+//   return new Promise((resolve, reject) => {
+
+//       if (node.internal.type === 'Mdx') {
+//         if (page.path !== '/') {
+//           deletePage(page)
+//           const { headings } = node
+//           createPage({
+//             ...page,
+//             context: {
+//               headings
+//             }
+//           })
+//         }
+//         resolve()
+//       }
+
+//   })
+// }
+
+exports.createPages = ({graphql, actions}) => {
+  const { createPage, createRedirect } = actions
+  return new Promise((resolve, reject) => {
+    graphql(`
+      query {
+        allMdx {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              headings {
+                value
+                depth
+              }
+            }
+          }
+        }
+      } 
+    `).then(result => {
+      if (result.errors) {
+        reject(result.errors)
+      }
+      createPage({
+        path: 'docs/',
+        component: path.resolve('./src/templates/docs.jsx'),
+        context: {
+          slug: 'docs/introduce/'
+        }
+      })
+
+      result.data.allMdx.edges.forEach(({node}) => {
+        const { slug } = node.fields
+        createPage({
+          path: slug,
+          component: path.resolve('./src/templates/docs.jsx'),
+          context: {
+            slug
+          }
+        })
+        resolve()
+      })
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === "Mdx") {
+    const value = createFilePath({ node, getNode })
+    const headings = []
+    console.log(node)
+    createNodeField({
+      name: "slug",
+      node,
+      value: `docs${value}`
+    });
+  }
+}

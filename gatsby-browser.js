@@ -7,6 +7,15 @@ import { addLocaleData, IntlProvider } from 'react-intl'
 import messagesEn from './src/locales/en/messages.json'
 import messagesIn from './src/locales/id/messages.json'
 import { ThemeProvider } from 'emotion-theming'
+import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/neo.css'
+require('codemirror/mode/markdown/markdown')
+require('codemirror/mode/javascript/javascript')
+require('codemirror/mode/jsx/jsx')
+require('codemirror/mode/css/css')
+require('codemirror/addon/edit/matchbrackets')
+require('codemirror/addon/edit/closetag')
+require('codemirror/addon/fold/xml-fold')
 
 addLocaleData(id, en)
 

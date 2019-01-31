@@ -1,7 +1,6 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { extractCritical } from 'emotion-server';
-import Helmet from "react-helmet"
 import { LangContextProvider, LangContextConsumer } from 'Contexts/LangContext'
 import { ThemeContextProvider, ThemeContextConsumer } from 'Contexts/ThemeContext'
 import id from 'react-intl/locale-data/id'

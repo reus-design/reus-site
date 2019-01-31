@@ -1,0 +1,97 @@
+---
+title: "Button"
+---
+
+import CodeMirror from 'Components/CodeMirror'
+import ComponentView from 'Components/ComponentView'
+import { Button } from 'reus'
+import { ButtonWrap } from './utils'
+
+# Button
+
+Easy to use button component to trigger an operation.
+
+## Basic usage
+<h2 id="basi-usage">Basic Usage</h2>
+
+There are `primary` button, `default` button and `danger` button in reus.
+
+<ComponentView
+  component={() => (
+    <ButtonWrap>
+      <Button>Default</Button>
+      <Button type="primary">Primary</Button>
+      <Button type="success">Success</Button>
+      <Button type="danger">Danger</Button>
+    </ButtonWrap>
+  )}
+  code={
+`<Button>Default</Button>
+<Button type="primary">Primary</Button>
+<Button type="success">Success</Button>
+<Button type="danger">Danger</Button>`}
+/>
+
+## Size
+
+Reus Design supports a default button size as well as a large and small size.
+If a large or small button is desired, set the `size` property to either `large` or `small` respectively. Omit the size property for a button with the default size.
+
+<ComponentView
+  component={() => (
+    <ButtonWrap>
+      <div>
+        <Button size="large">Default</Button>
+        <Button size="large" type="primary">Primary</Button>
+        <Button size="large" type="success">Success</Button>
+        <Button size="large" type="danger">Danger</Button>
+      </div>
+      <div>
+        <Button size="small">Default</Button>
+        <Button size="small" type="primary">Primary</Button>
+        <Button size="small" type="success">Success</Button>
+        <Button size="small" type="danger">Danger</Button>
+      </div>
+    </ButtonWrap>
+  )}
+  code={
+`<Button size="large">Default</Button>
+<Button size="large" type="primary">Primary</Button>
+<Button size="large" type="success">Success</Button>
+<Button size="large" type="danger">Danger</Button>
+
+<Button size="small">Default</Button>
+<Button size="small" type="primary">Primary</Button>
+<Button size="small" type="success">Success</Button>
+<Button size="small" type="danger">Danger</Button>`}
+/>
+
+## Disabled
+
+To mark a button as disabled, add the `disabled` property to the `Button`.
+
+<ComponentView
+  component={() => (
+    <ButtonWrap>
+      <Button disabled>Default</Button>
+      <Button disabled type="primary">Primary</Button>
+      <Button disabled type="success">Success</Button>
+      <Button disabled type="danger">Danger</Button>
+    </ButtonWrap>
+  )}
+  code={
+`<Button disabled>Default</Button>
+<Button disabled type="primary">Primary</Button>
+<Button disabled type="success">Success</Button>
+<Button disabled type="danger">Danger</Button>`}
+/>
+
+## API
+
+To get a customized button, just set `type`/`shape`/`size`/`loading`/`disabled`
+
+| Property       | Description | Type | Default |
+| ---------------| ------- | ----------- | --------
+| type           | default | `Bool`      |  `false`
+| size           | make background transparent and invert text and border colors, added in 2.7 |           |
+| disabled       | default |           |
