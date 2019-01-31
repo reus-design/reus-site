@@ -47,7 +47,8 @@
     "prettier": "^1.15.2",
     "react-codemirror2": "^5.1.0",
     "react-intl": "^2.8.0",
-    "react-transition-group": "^2.5.3"
+    "react-transition-group": "^2.5.3",
+    "reus": "^0.0.74"
   },
   "repository": {
     "type": "git",

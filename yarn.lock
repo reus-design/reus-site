@@ -9321,6 +9321,10 @@ retext@^5.0.0:
     retext-stringify "^2.0.0"
     unified "^6.0.0"
 
+reus@^0.0.74:
+  version "0.0.74"
+  resolved "https://registry.yarnpkg.com/reus/-/reus-0.0.74.tgz#48ed0f8701fdf5758a8ba12fec970cb12df3c1ef"
+
 rgb-regex@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/rgb-regex/-/rgb-regex-1.0.1.tgz#c0e0d6882df0e23be254a475e8edd41915feaeb1"
