@@ -10,6 +10,7 @@ import messagesEn from './src/locales/en/messages.json'
 import messagesIn from './src/locales/id/messages.json'
 import { ThemeProvider } from 'emotion-theming'
 
+
 addLocaleData(id, en)
 
 export const replaceRenderer = ({ 
@@ -25,13 +26,14 @@ export const replaceRenderer = ({
               <ThemeContextProvider>
                 <ThemeContextConsumer>
                   {
-                    ({theme}) => (
-                      <ThemeProvider theme={theme}>
+                    ({theme, themes}) => (
+                      <ThemeProvider theme={theme === 'light' ? themes.light : themes.dark}>
                         {bodyComponent}
                       </ThemeProvider>
                     )
                   }
                 </ThemeContextConsumer>
+
               </ThemeContextProvider>
             </IntlProvider>
           )

@@ -158,9 +158,12 @@ const Docs = (props) => {
   `
   const { data, location, pageContext } = props
   
-  if (location.pathname === '/docs') {
-    navigate('/docs/introduce/')
+  if (typeof window !== `undefined`) {
+    if (location.pathname === '/docs') {
+      navigate('/docs/introduce/')
+    }
   }
+  
   return (
     <Layout location={location}>
       <DocsWrapper>
@@ -181,7 +184,7 @@ const Docs = (props) => {
                     //     <a href={`#${heading.value}`}>{heading.value}</a>
                     //   </li>
                     // ))
-                    data.mdx.tableOfContents && data.mdx.tableOfContents.items.map(toc => toc.items.map((h, i) => (
+                    data.mdx.tableOfContents && data.mdx.tableOfContents.items.map(toc => toc.items && toc.items.map((h, i) => (
                       <li key={i}>
                         <a href={h.url}>{h.title}</a>
                       </li>

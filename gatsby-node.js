@@ -11,10 +11,21 @@ exports.onCreateBabelConfig = ({ actions, stage }) => {
   })
 }
 
-
 exports.onCreateWebpackConfig = ({
   stage, getConfig, rules, loaders, actions
  }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -31,30 +42,6 @@ exports.onCreateWebpackConfig = ({
     }
   })
 }
-
-// exports.onCreatePage = ({page, getNode, actions}) => {
-//   const { createPage, deletePage } = actions
-//   const node = getNode()
-//   console.log('--->',page)
-//   console.log('node--->',node)
-//   return new Promise((resolve, reject) => {
-
-//       if (node.internal.type === 'Mdx') {
-//         if (page.path !== '/') {
-//           deletePage(page)
-//           const { headings } = node
-//           createPage({
-//             ...page,
-//             context: {
-//               headings
-//             }
-//           })
-//         }
-//         resolve()
-//       }
-
-//   })
-// }
 
 exports.createPages = ({graphql, actions}) => {
   const { createPage, createRedirect } = actions

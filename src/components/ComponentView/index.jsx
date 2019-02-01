@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import CodeMirror from 'Components/CodeMirror'
+// import Highlight from 'Components/Highlight'
 import { Transition } from 'react-transition-group'
 import { TweenLite } from 'gsap'
 import { Flex } from 'reus'
@@ -76,7 +77,6 @@ const ComponentView = ({component, code}) => {
     setShowCode(!showCode)
   }
 
-  
   return (
     <CSWrapper>
       <CSWIn>
@@ -106,7 +106,7 @@ const ComponentView = ({component, code}) => {
           <CSCode showCode={showCode}>
             <Action showCode={showCode} handleShowCode={handleShowCode}/>
             <CSCodeIn>
-              <CodeMirror value={code}/>
+              {/* <Highlight code={code}/> */}
             </CSCodeIn>
           </CSCode>
         </Transition>
