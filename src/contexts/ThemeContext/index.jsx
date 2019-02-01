@@ -42,19 +42,9 @@ const ThemeContextProvider = ({children}) => {
     }
   }
 
-  // const _theme = cookies.get('theme')
-  // if (_theme) {
-  //   setTheme(_theme)
-  // }
-
-  const getTheme = () => new Promise((resolve, reject) => {
+  useEffect(() => {
     const _theme = cookies.get('theme')
-    resolve(_theme)
-  })
-
-  useEffect(async () => {
-    const theme = await getTheme()
-    if (theme) setTheme(theme)
+    if (theme) setTheme(_theme)
   }, [])
 
   return (
