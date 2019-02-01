@@ -54,7 +54,7 @@ export const HeaderMenu = ({location, logo}) => (
                   </Link>
                 </div>
                 <div>
-                  <Link to="/docs/button">
+                  <Link to="/docs/introduce/">
                     Components
                   </Link>
                 </div>

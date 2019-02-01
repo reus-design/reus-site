@@ -160,7 +160,7 @@ const Docs = (props) => {
   
   if (typeof window !== `undefined`) {
     if (location.pathname === '/docs') {
-      navigate('/docs/introduce/')
+      navigate('/docs/getting-started/')
     }
   }
   

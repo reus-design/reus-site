@@ -28,13 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `reus-design`,
+        short_name: `reus`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/reus-logo.png`,
+        icon: `src/images/reus-favicon.png`,
       },
     },
     // 'gatsby-plugin-offline',
