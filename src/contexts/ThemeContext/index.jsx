@@ -44,7 +44,7 @@ const ThemeContextProvider = ({children}) => {
 
   useEffect(() => {
     const _theme = cookies.get('theme')
-    if (theme) setTheme(_theme)
+    if (_theme) setTheme(_theme)
   }, [])
 
   return (
