@@ -7,13 +7,13 @@ export const Pre = styled.pre`
   text-align: left;
   margin: 1em 0;
   padding: 0.5em;
-  background-color: #fff !important;
+  background-color: none !important;
   & .token-line {
     line-height: 1.3em;
     height: 1.3em;
     .token {
       &.plain {
-        color: #333 !important;
+        color: ${({theme}) => theme.color} !important;
       }
       &.tag {
         &.attr-name {
