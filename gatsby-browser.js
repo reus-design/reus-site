@@ -7,6 +7,7 @@ import { addLocaleData, IntlProvider } from 'react-intl'
 import messagesEn from './src/locales/en/messages.json'
 import messagesIn from './src/locales/id/messages.json'
 import { ThemeProvider } from 'emotion-theming'
+import 'reus/dist/index.css'
 
 addLocaleData(id, en)
 

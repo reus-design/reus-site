@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-// import Highlight from 'Components/Highlight'
+import Highlight from 'Components/Highlight'
 import { Transition } from 'react-transition-group'
 import { TweenLite } from 'gsap'
 import { Flex } from 'reus'
@@ -106,7 +106,7 @@ const ComponentView = ({component, code}) => {
           <CSCode showCode={showCode}>
             <Action showCode={showCode} handleShowCode={handleShowCode}/>
             <CSCodeIn>
-              {/* <Highlight code={code}/> */}
+              <Highlight code={code}/>
             </CSCodeIn>
           </CSCode>
         </Transition>
