@@ -73,7 +73,7 @@ exports.createPages = ({graphql, actions}) => {
         path: 'docs/',
         component: path.resolve('./src/templates/docs.jsx'),
         context: {
-          slug: 'docs/introduce/'
+          slug: 'docs/getting-started/'
         }
       })
 

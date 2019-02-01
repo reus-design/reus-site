@@ -8,6 +8,7 @@ export const Pre = styled.pre`
   margin: 1em 0;
   padding: 0.5em;
   background-color: transparent !important;
+  overflow-y: auto;
   & .token-line {
     line-height: 1.3em;
     height: 1.3em;

@@ -5,6 +5,7 @@ title: "Button"
 import ComponentView from 'Components/ComponentView'
 import { Button } from 'reus'
 import { ButtonWrap } from './utils'
+import { css } from '@emotion/core'
 
 # Button
 
@@ -18,7 +19,7 @@ There are `primary` button, `default` button and `danger` button in reus.
   component={() => (
     <ButtonWrap>
       <Button>Default</Button>
-      <Button type="primary">Primary</Button>
+      <Button css={css`padding: 20px`} type="primary">Primary</Button>
       <Button type="success">Success</Button>
       <Button type="danger">Danger</Button>
     </ButtonWrap>

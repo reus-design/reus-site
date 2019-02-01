@@ -59,7 +59,7 @@ export const HeaderMenu = ({location, logo}) => (
                   </Link>
                 </div>
                 <div>
-                  <Switch onChange={handleTheme} toggle={theme === 'dark'}/>
+                  <Switch onChange={handleTheme} toggle={theme === 'light'}/>
                 </div>
                 <div>
                   <a href="https://github.com/muhrusdi/reus-design" target="_blank">
