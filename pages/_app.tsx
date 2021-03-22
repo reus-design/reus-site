@@ -59,7 +59,8 @@ function App({ Component, pageProps }: AppProps) {
     }
   }, [mounted]);
 
-  const isDocs = router.pathname.includes('/docs');
+  const isDocs = router.pathname !== '/';
+  console.log(router)
 
   return (
     <ThemeProvider

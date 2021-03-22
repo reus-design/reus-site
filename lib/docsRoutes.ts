@@ -22,6 +22,13 @@ export const docsRoutes = [
   },
 
   {
+    label: 'Components',
+    pages: [
+      { title: 'Button', slug: 'components/button' },
+    ],
+  },
+
+  {
     label: 'Configuration',
     pages: [
       { title: 'Theme tokens', slug: 'docs/tokens' },

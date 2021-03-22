@@ -75,6 +75,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
                 css={{
                   color: '$hiContrast',
                   display: 'inline-flex',
+                  alignItems: 'center',
                   '&:focus': { boxShadow: 'none' },
                 }}
               >
@@ -93,7 +94,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
                 >
                   Stitches homepage
                 </span>
-                <StitchesLogo />
+                Reus Design
               </Box>
             </NextLink>
             <Badge variant="yellow" css={{ ml: '$3' }}>
